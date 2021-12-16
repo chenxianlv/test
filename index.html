@@ -5,30 +5,23 @@
   <title>工具</title>
 </head>
 <body>
-  <button onclick="vibrateOnce()">振动50</button>
-  <button onclick="multipleTimes()">振动100</button>
-  <button onclick="startPersistentVibrate()">振动150</button>
-  <button onclick="stopVibrate()">200</button>
+  <button onclick="vibrateOnce(5)">振动5</button>
+  <button onclick="vibrateOnce(10)">振动10</button>
+  <button onclick="vibrateOnce(15)">振动15</button>
+  <button onclick="vibrateOnce(20)">振动20</button>
+  <button onclick="vibrateOnce(25)">振动25</button>
+  <button onclick="vibrateOnce(30)">振动30</button>
+  <button onclick="vibrateOnce(35)">振动35</button>
+  <button onclick="vibrateOnce(40)">振动40</button>
+  <button onclick="vibrateOnce(45)">振动45</button>
+  <button onclick="vibrateOnce(50)">振动50</button>
+
   <script type="text/javascript">
     // 振动一次200ms
-    function vibrateOnce() {
-      navigator.vibrate(50);
+    function vibrateOnce(x) {
+      navigator.vibrate(x);
     }
 
-    // 振动一个周期
-    function multipleTimes() {
-      navigator.vibrate(100);
-    }
-
-    // 停止振动
-    function stopVibrate() {
-      navigator.vibrate(150);
-    }
-
-    // 持续循环振动以500ms
-    function startPersistentVibrate() {
-      navigator.vibrate(200);
-    }
   </script>
 </body>
 </html>
