@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>工具</title>
+</head>
+<body>
+  <button onclick="vibrateOnce()">振动50</button>
+  <button onclick="multipleTimes()">振动100</button>
+  <button onclick="startPersistentVibrate()">振动150</button>
+  <button onclick="stopVibrate()">200</button>
+  <script type="text/javascript">
+    // 振动一次200ms
+    function vibrateOnce() {
+      navigator.vibrate(50);
+    }
+
+    // 振动一个周期
+    function multipleTimes() {
+      navigator.vibrate(100);
+    }
+
+    // 停止振动
+    function stopVibrate() {
+      navigator.vibrate(150);
+    }
+
+    // 持续循环振动以500ms
+    function startPersistentVibrate() {
+      navigator.vibrate(200);
+    }
+  </script>
+</body>
+</html>
