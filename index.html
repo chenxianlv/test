@@ -2,26 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>工具</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      padding:0;
+      margin:0;
+      -webkit-tap-highlight-color: transparent;
+    }
+    #plusOne{
+      margin-top: 100px;
+      display: block;
+      width: 100%;
+      font-size: 100px;
+      background-color: skyblue;
+      border: 0;
+      border-radius: 25%;
+    }
+  </style>
+  <title>计数器</title>
 </head>
 <body>
-  <button onclick="vibrateOnce(5)">振动5</button>
-  <button onclick="vibrateOnce(10)">振动10</button>
-  <button onclick="vibrateOnce(15)">振动15</button>
-  <button onclick="vibrateOnce(20)">振动20</button>
-  <button onclick="vibrateOnce(25)">振动25</button>
-  <button onclick="vibrateOnce(30)">振动30</button>
-  <button onclick="vibrateOnce(35)">振动35</button>
-  <button onclick="vibrateOnce(40)">振动40</button>
-  <button onclick="vibrateOnce(45)">振动45</button>
-  <button onclick="vibrateOnce(50)">振动50</button>
+  <button id="plusOne">+1</button>
 
+
+  <script src="src/jquery-1.12.3.js"></script>
   <script type="text/javascript">
-    // 振动一次200ms
-    function vibrateOnce(x) {
-      navigator.vibrate(x);
+    // 振动一次30ms
+    function vibrateOnce() {
+      navigator.vibrate(30);
     }
-
+    let plus = $('#plusOne')
+    plus.height(plus.width())
+    plus.on('click',vibrateOnce)
   </script>
 </body>
 </html>
